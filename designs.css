@@ -1,0 +1,275 @@
+.header{
+    background-color: rgba(230, 166, 93,0.8 );
+    margin-top: -8px;
+    margin-left: -8px;
+    margin-right: -8px;
+    display: flex;
+    position: relative;
+    div{
+        margin-top: auto;margin-bottom: auto;
+        display: flex;
+    }
+    
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    visibility: visible;
+    color: rgb(29, 26, 32);
+}
+a:visited {
+    color: rgb(29, 26, 32);
+}
+a:link {
+    color: rgb(29, 26, 32);
+}
+a:active {
+    color: rgb(29, 26, 32);    
+}
+.location{
+    position: absolute;
+    left:0;
+    right: 0;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    div{
+        position: relative;
+        margin: auto;
+        a{
+            width: fit-content;
+            p{
+                width: auto;    
+            }
+        }
+    }
+}
+.right{
+    position: absolute;
+    margin-top: -8px;
+    display: flex;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+    margin-right: 20px;
+    a{
+        margin-right: 60px;
+    }
+    button{
+        border: none;
+        outline: none;
+        background: none;
+        margin-top: 10px;
+        height: 50px; 
+        cursor: pointer;
+    }
+}
+  @font-face {
+    font-family: myFirstFont;
+    src: url(SairaCondensed-Regular.ttf);
+ }
+ 
+ @font-face {
+    font-family: myFirstFont;
+    src: url(SairaCondensed-Bold.ttf); 
+ }
+ *{
+    font-family: myFirstFont;
+ }
+ p{
+    font-size: larger;
+ }
+.banner{
+    display: flex;
+    margin-left: -8px;
+    margin-right: -8px;
+    bottom: 0;
+    position: fixed;
+    margin-bottom: -6.4px;
+}
+.banner a{
+    width: 24.86%;
+}
+.banner a img{
+    width: 100%;
+}
+.search{
+    height: 20px; width: 242px;  margin-left: 10px; 
+}
+.searchbutton{ 
+    height: 22px;margin-top: auto; margin-bottom: auto; margin-left:-24px ;
+}
+.bannercolor1{
+    z-index: 1;
+    background-color: rgb(137,101,88); width: 148px;
+}
+.homeimage{
+    height: 40px; margin-left: 10px; margin-top: 4px; margin-bottom: 2px;
+}
+.searchbg{
+    height: 54px; background-color:  rgb(29, 26, 32);width: 277px; position:absolute; z-index: -1;margin-left: 139px; margin-top: -1px;
+}
+.searchicon{
+    background-color: white;  border-color: white;height: 22px;
+}
+.menuList{
+    background-color:  rgb(131, 57, 33);
+    padding-top: 3px;
+    margin-left: -8px;
+    margin-right: -8px;
+    a{
+        margin: auto;
+        position: relative;
+        text-decoration: none;
+        img{
+            width: 8.7%;
+            object-fit: cover;
+        }
+        span{
+            visibility: hidden;
+            position:absolute;
+            z-index: 1;            
+            
+            background-color: rgb(219, 0, 7);
+            width: 100px;
+            text-align: center;
+            top: 100%;
+            left:50%;
+            margin-left:-54px;
+        }
+        span{
+            margin: auto;
+        }
+    }
+    a:hover span{
+        visibility: visible;
+        color: rgb(29, 26, 32);
+    }
+    a:visited span{
+        color: rgb(29, 26, 32);
+    }
+    a:link span{
+        color: rgb(29, 26, 32);
+    }
+    a:active span{
+        color: rgb(29, 26, 32);
+    }
+}
+.tabs{
+    margin-left: -8px;
+    margin-right: -8px;
+      overflow: hidden;
+  background-color: rgb(230, 166, 93);
+}
+.tabContent{
+    margin-left: -8px;
+    margin-right: -8px;
+    background-color: rgb(132, 59, 36);
+    border-top: none; 
+    height: 600px ;
+    display: flex;
+    overflow: auto;
+    h3{
+        margin-top: -2px;
+        color:#f4f4f4;
+    }
+    p{
+        margin-top: -15px;
+        color:#f4f4f4;
+    }
+    div{
+        border-radius: 25px;
+        width: 15%;
+        float: left;
+        margin: 2.5%;
+        margin-bottom: 0px;
+        margin-top: -10px;
+        height: 420px  ;
+        background-color: rgb(169, 194, 63);
+        position: relative;
+        text-align: center;
+        a{
+            img{
+                margin-top: 22px ;
+                width: 100%;
+                background-color: rgb(244, 244, 244);
+            }
+        }
+        h2{
+            position: absolute;
+            top: 83%;
+            bottom: 0;
+            left:40%;
+        }
+        p{
+            margin-top: 0px;
+            color: black;
+        }
+    }
+        
+}
+
+
+.tabs button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px ;
+  transition: 0.3s;
+}
+.tabs button:hover {
+  background-color: rgb(191, 137, 77);
+}
+
+.tabs button.active {
+  background-color: rgb(153, 110, 62);
+}
+.footer{
+    background-color:rgb(230, 166, 93) ;
+    padding-top: 20px;
+    height:  280px;
+    display: flex;
+    margin-left: -8px;
+    margin-right: -8px;
+    padding-bottom: 60px;
+    img{
+        background-color: rgb(176, 0, 33);
+        height:55%;
+        margin-right:20px ;
+        border-radius: 10px;
+    }
+    div{
+        height:80%;
+        padding-right: 20px;
+        img{
+            width:25px;
+            height: 25px;
+            border-radius: 5px;
+        }
+        
+    }
+
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(219, 0, 7);
+  border-color: black;
+  border-width: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(102, 117, 38)
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(168, 193, 62) 
+}
