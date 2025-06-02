@@ -3,6 +3,7 @@
     margin-top: -8px;
     margin-left: -8px;
     margin-right: -8px;
+    margin-bottom: -8px;
     display: flex;
     position: relative;
     div{
@@ -11,6 +12,13 @@
     }
     
 }
+body{
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+   user-select: none;       
+}
+
 a{
     text-decoration: none;
 }
@@ -35,12 +43,16 @@ a:active {
     text-align: center;
     display: flex;
     div{
+        height: fit-content;
         position: relative;
         margin: auto;
+        margin-bottom: -8px;
+        margin-top: -8px;
         a{
             width: fit-content;
             p{
                 width: auto;    
+                margin-bottom: -8px;
             }
         }
     }
@@ -50,19 +62,31 @@ a:active {
     margin-top: -8px;
     display: flex;
     right: 0;
+    height: fit-content;
+    margin-bottom: -8px;
     text-align: center;
     z-index: 1;
     margin-right: 20px;
+    div{
+        margin-bottom: -40px;
+        height: fit-content;
+    }
     a{
         margin-right: 60px;
+        height: 40px;
+        margin-bottom: -8px;
     }
     button{
         border: none;
         outline: none;
+        cursor: pointer;
         background: none;
         margin-top: 10px;
         height: 50px; 
-        cursor: pointer;
+        
+    }
+    h4{
+        margin-bottom: -40px;
     }
 }
   @font-face {
@@ -86,7 +110,7 @@ a:active {
     margin-right: -8px;
     bottom: 0;
     position: fixed;
-    margin-bottom: -6.4px;
+    margin-bottom: -8px;
 }
 .banner a{
     width: 24.86%;
@@ -115,31 +139,29 @@ a:active {
 }
 .menuList{
     background-color:  rgb(131, 57, 33);
+    margin-top: 8px;
     padding-top: 3px;
     margin-left: -8px;
     margin-right: -8px;
+    min-height: 52px;
     a{
         margin: auto;
         position: relative;
         text-decoration: none;
         img{
-            width: 8.7%;
+            width: 8.9%;
             object-fit: cover;
         }
         span{
             visibility: hidden;
             position:absolute;
             z-index: 1;            
-            
             background-color: rgb(219, 0, 7);
             width: 100px;
             text-align: center;
             top: 100%;
             left:50%;
-            margin-left:-54px;
-        }
-        span{
-            margin: auto;
+            margin-left:-50px;
         }
     }
     a:hover span{
@@ -155,19 +177,32 @@ a:active {
     a:active span{
         color: rgb(29, 26, 32);
     }
+    button{
+        background-color: rgb(169, 194, 63);
+        border: none;
+        outline: none;
+        cursor: pointer;
+        margin-bottom: 3px;
+        font-size: xx-large;
+        h4{
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    }
 }
 .tabs{
     margin-left: -8px;
     margin-right: -8px;
       overflow: hidden;
   background-color: rgb(230, 166, 93);
+  height: 77px;
 }
 .tabContent{
     margin-left: -8px;
     margin-right: -8px;
     background-color: rgb(132, 59, 36);
     border-top: none; 
-    height: 600px ;
+    height: 200% ;
     display: flex;
     overflow: auto;
     h3{
@@ -183,19 +218,15 @@ a:active {
         width: 15%;
         float: left;
         margin: 2.5%;
-        margin-bottom: 0px;
-        margin-top: -10px;
         height: 420px  ;
         background-color: rgb(169, 194, 63);
         position: relative;
         text-align: center;
-        a{
-            img{
-                margin-top: 22px ;
-                width: 100%;
-                background-color: rgb(244, 244, 244);
+        img{
+            margin-top: 22px ;
+            width: 100%;
+            background-color: rgb(244, 244, 244);
             }
-        }
         h2{
             position: absolute;
             top: 83%;
@@ -234,7 +265,8 @@ a:active {
     display: flex;
     margin-left: -8px;
     margin-right: -8px;
-    padding-bottom: 60px;
+    padding-bottom: 70px;
+    margin-bottom: -8px;
     img{
         background-color: rgb(176, 0, 33);
         height:55%;

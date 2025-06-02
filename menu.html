@@ -6,11 +6,8 @@
     <meta charset="UTF-8" />
     <title>McDelivery</title>
     <style>
-        .menuList{
-            div{
-                margin: auto;
-                height:fit-content;
-            }
+        .footer{
+            padding-bottom: 0px;
         }
     </style>
 </head>
@@ -30,7 +27,6 @@
         <div>
             <a href="#"><h4>Orders</h4></a>
         </div>
-        
         <div>
             <a href="#"><h4>Sign Up</h4></a>
         </div>
@@ -38,50 +34,153 @@
         <div>
             <a href="#"><h4>Log In</h4></a>
         </div>
-        <div><button><img src="McD_Bag_RGB.847a1d2.png"></button></div>
+        <div><button><img src="McD_Bag_RGB.847a1d2.png"><button></div>
     </div>
     <img class="searchbg">
     <div class="bannercolors"></div>
     <div class="header">
-        <a href="McDelivery.html" class="ba
-        nnercolor1"><img src="McDonald_McDelivery_Horizontal.2be36a1.png" class="homeimage"></a>
+        <a href="McDelivery.html" class="bannercolor1"><img src="McDonald_McDelivery_Horizontal.2be36a1.png" class="homeimage"></a>
         <div><input type="text" placeholder="Search for your McDonald's favorites" class="search">
         <a href="#" class="searchbutton"><img src="download.svg" class="searchicon"></a></div> 
     </div>
-    <div class="menuList">
+    <div class="menuList" style="display: flex;">
         <a href="#">
-            <button>Featured</button>
+            <button><h4>Featured</h4></button>
         </a>
         <a href="#">
-            <button>Group Meal</button>
+            <button><h4>Group Meal</h4></button>
         </a>
         <a href="#">
-            <button>Chicken & Fish</button>
+            <button><h4>Chicken & Fish</h4></button>
         </a>
         <a href="#">
-            <button>Burgers</button>
+            <button><h4>Burgers</h4></button>
         </a>
         <a href="menu.html">
-            <button>McSpaghetti</button>
+            <button><h4 style="text-decoration: underline;">McSpaghetti</h4></button>
         </a>
         <a href="#">
-            <button>Rice Bowls</button>
+            <button><h4>Rice Bowls</h4></button>
         </a>
         <a href="#">
-            <button>Desserts</button>
+            <button><h4>Desserts</h4></button>
         </a>
         <a href="#">
-            <button>McCafé</button>
+            <button><h4>McCafé</h4></button>
         </a>
         <a href="#">
-            <button>Fries</button>
+            <button><h4>Fries</h4></button>
         </a>
         <a href="#">
-            <button>Happy Meal</button>
+            <button><h4>Happy Meal</h4></button>
         </a>
-        <a href="#"><button>Sulit Busog Meals</button>
+        <a href="#"><button><h4>Sulit Busog Meals</h4></button>
         </a>
     </div>
+    <div class="tabs">
+        <button style="visibility: hidden;" class="tabItem" onclick="openTab(event, 'Recommended')" id="defaultOpen"><P>Recommended</P></button>
+    </div>
+    <div id="Recommended" class="tabContent">
+        <a href="#">
+            <div>
+                <img src="product list/assets we're actually using/1pc.jpg">
+                <p>
+                    1-pc. Chicken McDo w/ McSpaghetti Meal
+                </p>
+                <h2>₱201
+                </h2>
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                <img src="product list/assets we're actually using/1pc spicy.jpg">
+                <p>
+                    1-pc. Spicy Chicken McDo w/ McSpaghetti Meal
+                </p>
+                <h2>
+                 ₱206   
+                </h2>
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                <img src="product list/assets we're actually using/1pc w fries.jpg">
+                <p>
+                    1-pc. Chicken McDo w/ McSpaghetti & Fries Meal
+                </p>
+                <h2>
+                    ₱262
+                </h2>
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                <img src="product list/assets we're actually using/1pc spicy w fries.jpg">
+                <p>
+                    1-pc. Spicy Chicken McDo w/ McSpaghetti & Fries Meal
+                </p>
+                <h2>
+                ₱267
+                </h2>
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                <img src="product list/assets we're actually using/mega meal.webp">
+                <p>
+                    Mega Meal - Chicken McDo w/ Rice & McSpaghetti
+                </p>
+                <h2>
+                    ₱215
+                </h2>
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                <img src="product list/assets we're actually using/mega meal 2.jpg">
+                <p>
+                    Mega Meal - Spicy Chicken McDo w/ Rice & McSpaghetti
+                </p>
+                <h2>
+                    ₱221
+                </h2>
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                <img src="product list/assets we're actually using/mcspaghetti w fries.jpg">
+                <p>
+                    McSpaghetti w/ Fries Meal
+                </p>
+                <h2>
+                    ₱168
+                </h2>
+            </div>
+        </a>
+        <a href="mcspaghetti.html">
+            <div>
+                <img src="product list/assets we're actually using/mcspaghetti.jpg">
+                <p>
+                    McSpaghetti Meal
+                </p>
+                <h2>
+                    ₱105
+                </h2>
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                <img src="product list/assets we're actually using/mcspaghetti w burger.jpg">
+                <p>
+                    McSpaghetti w/ Burger Mcdo Meal
+                </p>
+                <h2>
+                    ₱149
+                </h2>
+            </div>
+        </a>
+    </div>
+
     <div class="footer">
         <img src="McD_GoldenArches_1235_RGB@2x.png">
         <div><a href="#"><h2>About</h2></a>
@@ -99,5 +198,6 @@
             <a href="#"><img src="120px-Instagram_simple_icon.png"></a>
         </div>
     </div>
+    <script>document.getElementById("defaultOpen").click();</script>
     </body>
 </html>
