@@ -2,12 +2,32 @@
 <html>
 <head>
     <script src="mcdelivery.js"></script>
+    <script>
+        function openT(evt, tabName){
+    var i, tabContent, tabItem;
+    tabContent=document.getElementsByClassName("tabC");
+    for (i=0; i<tabContent.length; i++){
+        tabContent[i].style.display="none";
+    }
+    tabItem = document.getElementsByClassName("tabI");
+    for (i=0; i<tabItem.length; i++){
+        tabItem[i].className=tabItem[i].className.replace(" active","");
+    }
+
+    document.getElementById(tabName).style.display="block";
+    evt.currentTarget.className+=" active";
+}
+    </script>
     <link rel="stylesheet" href="designs.css">
     <meta charset="UTF-8" />
     <title>McDelivery</title>
+    <link rel="icon" type="image/x-icon" href="mds_favicon.png">
     <style>
         .footer{
             padding-bottom: 0px;
+        }
+        button{
+            cursor: pointer;
         }
     </style>
 </head>
@@ -35,7 +55,7 @@
         <div>
             <a href="#"><h4>Log In</h4></a>
         </div>
-        <div><button><img src="McD_Bag_RGB.847a1d2.png"></button></div>
+        <div><button class="tabAdd" onclick="changeAdd(event)"><img src="McD_Bag_RGB.847a1d2.png"></button></div>
     </div>
     <img class="searchbg">
     <div class="bannercolors"></div>
@@ -45,7 +65,200 @@
         <a href="#" class="searchbutton"><img src="download.svg" class="searchicon"></a></div>         
     </div>
     <div class="menuList">
+        <a href="menu.html">
+            <button class="tabAdd" onclick="changeAdd(event)"><h4>< Back to Menu</h4></button>
+        </a>
+    </div>
+    <div class="tabs"
+    style="margin-bottom: -8px;
+    height: fit-content;">
+        <button style="visibility: hidden;" class="tabI" onclick="openT(event, 'Recommended')"><P>Recommended</P></button>
+        <h2 style="margin-top: 15px;" >Customize your Order</h2>
+        <button style="font-weight: bold;font-size: x-large;" onclick="openT(event, 'Recommended')"class="tabI" id="defaultO">Large</button>
+        <button style="font-weight: bold;font-size: x-large;" onclick="openT(event, 'Recommended')"class="tabI">Medium</button>
+        <button style="font-weight: bold;font-size: x-large;" onclick="openT(event, 'Recommended')"class="tabI">Small</button>
+        <button style="font-weight: bold;font-size: x-large;" onclick="openT(event, 'Recommended')"class="tabI">Solo</button>
+    </div>
+    <div id="Recommended" class="tabC">
+        
+        <div style="background-color: rgb(176, 0, 33); height: 540px; width: 320px ;">
+            <img src="product page/assets we're actually using/mcspaghetti.jpg" style="background-color: rgb(255, 188, 13);">
+            <h2 style="position: static;
+            top: 0%;
+            bottom: 1;
+            left:0%;
+            text-align: left;
+            padding-left: 4px;">McSpaghetti Meal <br><br>
+            ₱116.00</h2>
+            <p style="margin-top: -20px;
+            margin-left: 190px;">1</p>
+            <button style="border-radius: 30px;height: 25px;position: absolute;
+            top: 90%;
+            bottom: 0;
+            left:70%;">
+                <h1 style="margin-top: -24px;">_</h1>
+            </button>
+            <button style="border-radius: 30px;height: 25px; width: 25px;
+            position: absolute;
+            top: 90%;
+            bottom: 0;
+            left:81%;">
+                <h1 style="margin-top: -14px; margin-left: -1.5px;">+</h1>
+            </button>
+        </div>
+        <div style="width: 72.7%; 
+        height: 540px;" >
+            <div class="tabs" style="margin-left: -0px;margin-top: -0px;overflow: hidden;background-color: rgb(230, 166, 93);  height: 77px;
+            background-color: rgb(176, 0, 33);
+            padding: 0px;
+            margin-bottom: 0px;
+            height: fit-content;
+            border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; width:100%" >
+            <button class="tabItem" onclick="openTab(event, 'drinks')" id="defaultOpen"><P>Choose your Drink</P></button>
+            <button class="tabItem" onclick="openTab(event, 'size')"><p>Choose your Drink Size</p></button>
+            <button class="tabItem" onclick="openTab(event, 'addon')"><p>Include Add-ons</p></button>
+            
+            </div>
+            <div id="drinks" class="tabContent" style="overflow: auto; width: 97%;">
+                <button class="tabDrink" onclick="changeDrink(event)">
+                        <img src="product page/assets we're actually using/coke.png">
+                        <p>Coke</p>
+                </button>
+                <button class="tabDrink" onclick="changeDrink(event)">
+                        <img src="product page/assets we're actually using/coke zero.png">
+                        <p>Coke Zero</p>
+                </button>
+                <button class="tabDrink" onclick="changeDrink(event)">
+                        <img src="product page/assets we're actually using/sprite.png">
+                        <p>Sprite</p>
+                </button>
+                <button class="tabDrink"onclick="changeDrink(event)">
+                    <img src="product page/assets we're actually using/coke mcfloat.png">
+                    <p>Coke McFloat</p>
+                </button>
+                <button class="tabDrink"onclick="changeDrink(event)">
+                    <img src="product page/assets we're actually using/orange.png">
+                    <p>Orange Juice</p>
+                </button>
+                <button class="tabDrink"onclick="changeDrink(event)">
+                    <img src="product page/assets we're actually using/apple.png">
+                    <p>Apple Juice</p>
+                </button>
+                <button class="tabDrink"onclick="changeDrink(event)">
+                    <img src="product page/assets we're actually using/iced tea.png">
+                    <p>Iced Tea</p>
+                </button>
+                <button class="tabDrink"onclick="changeDrink(event)">
+                    <img src="product page/assets we're actually using/coffee float.webp">
+                    <p>McCafé Coffee Float</p>
+                </button>
+                <button class="tabDrink"onclick="changeDrink(event)">
+                    <img src="product page/assets we're actually using/iced coffee.webp">
+                    <p>McCafé Iced Coffee Original
+</p>
+                </button>
+                <button class="tabDrink"onclick="changeDrink(event)">
+                    <img src="product page/assets we're actually using/iced coffee vanilla.webp">
+                    <p>McCafé Iced Coffee Vanilla
+</p>
 
+                </button>
+                <button class="tabDrink"onclick="changeDrink(event)">
+                    <img src="product page/assets we're actually using/iced coffee chocolate.webp">
+                    <p>McCafé Iced Coffee Chocolate
+</p>
+                </button>
+                <button class="tabDrink"onclick="changeDrink(event)">
+                    <img src="product page/assets we're actually using/iced coffee black.webp">
+                    <p>Iced Coffee Black</p>
+                </button>
+                <button class="inactive">
+                    <img src="product page/assets we're actually using/americano.webp">
+                    <p>McCafé Americano
+</p>
+                </button>
+                <button class="inactive">
+                    <img src="product page/assets we're actually using/hot latte.webp">
+                    <p>McCafé Hot Latte
+</p>
+                </button>
+                <button class="inactive">
+                    <img src="product page/assets we're actually using/cappuccino.webp">
+                    <p>McCafé Cappucino
+</p>
+                </button>
+                <button class="inactive">
+                    <img src="product page/assets we're actually using/iced americano.webp">
+                    <p>McCafé Iced Americano
+</p>
+                </button>
+                <button class="inactive">
+                    <img src="product page/assets we're actually using/iced latte.webp">
+                    <p>McCafé Iced Latte
+</p>
+                </button>
+                <button class="inactive">
+                    <img src="product page/assets we're actually using/iced mocha.webp">
+                    <p>McCafé Iced Mocha
+</p>
+                </button>
+                <button class="inactive">
+                    <img src="product page/assets we're actually using/iced mochaccino.webp">
+                    <p>McCafé Iced Mochaccino
+</p>
+                </button>
+            </div>
+            <div id="size" class="tabContent" style="overflow: auto;width: 97%;">
+                <button class="tabSize" onclick="changeSize(event)" style="height: 80%;">
+                    <img src="product page/assets we're actually using/drink.png">
+                    <p>Medium</p>
+                </button>
+                <button class="tabSize" onclick="changeSize(event)" style="height: 80%;">
+                    <img src="product page/assets we're actually using/drink.png">
+                    <p>Large<br>(+₱5)
+                    </p>
+                </button>
+            </div>
+            <div id="addon" class="tabContent" style="overflow: auto;width: 97%;">
+                <button class="tabAdd" onclick="changeAdd(event)">
+                    <img src="product page/assets we're actually using/matcha oreo.jpg"   >
+                    <p>Matcha McFlurry with Oreo Solo
+                        <br>(+₱83)
+                    </p>
+                </button>
+                <button class="tabAdd" onclick="changeAdd(event)">
+                    <img src="product page/assets we're actually using/golden apple.jpg"   >
+                    <p>Golden Apple Sundae
+                        <br>(+₱66)
+                    </p>
+                </button>
+                <button class="tabAdd" onclick="changeAdd(event)">
+                    <img src="product page/assets we're actually using/mcflurry.jpg"  >
+                    <p>
+                        McFlurry with Oreo<br>(+₱70)
+                    </p>
+                </button>
+                <button class="tabAdd" onclick="changeAdd(event)">
+                    <img src="product page/assets we're actually using/apple pie.jpg" >
+                    <p>Apple Pie
+                        <br>(+₱45)
+                    </p>
+                </button>
+                <button class="tabAdd" onclick="changeAdd(event)">
+                    <img src="product page/assets we're actually using/misc_item.jpg"  >
+                    <p>Extra McSpaghetti Sauce
+                        <br>(+₱25)
+                    </p>
+                </button>
+                <button class="tabAdd" onclick="changeAdd(event)">
+                    <img src="product page/assets we're actually using/misc_item.jpg"  >
+                    <p>Extra Cheese
+                        <br>(+₱17)
+                    </p>
+                </button>
+            </div>
+        </div>
+        
     </div>
     <div class="footer">
         <img src="McD_GoldenArches_1235_RGB@2x.png">
@@ -64,6 +277,8 @@
             <a href="#"><img src="120px-Instagram_simple_icon.png"></a>
         </div>
     </div>
-</html>
+    <script>
+    document.getElementById("defaultOpen").click();
+    document.getElementById("defaultO").click();</script>
 </body>
 </html>

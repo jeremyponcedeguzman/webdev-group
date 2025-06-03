@@ -189,6 +189,31 @@ a:active {
             margin-bottom: 0px;
         }
     }
+    div{
+        border-radius: 25px;
+        width: 15%;
+        float: left;
+        margin: 2.5%;
+        height: 420px  ;
+        background-color: rgb(169, 194, 63);
+        position: relative;
+        text-align: center;
+        img{
+            margin-top: 22px ;
+            width: 100%;
+            background-color: rgb(244, 244, 244);
+            }
+        h2{
+            position: absolute;
+            top: 83%;
+            bottom: 0;
+            left:40%;
+        }
+        p{
+            margin-top: 0px;
+            color: black;
+        }
+    }
 }
 .tabs{
     margin-left: -8px;
@@ -196,8 +221,96 @@ a:active {
       overflow: hidden;
   background-color: rgb(230, 166, 93);
   height: 77px;
+  h2{
+   float: left; 
+   padding-right: 60px;
+  }
+}
+#addon{
+    button{
+        height: fit-content;
+    }
 }
 .tabContent{
+    margin-left: -8px;
+    margin-right: -8px;
+    background-color: rgb(132, 59, 36);
+    border-top: none; 
+    height: 200% ;
+    display: flex;
+    overflow: auto;
+    h3{
+        margin-top: -2px;
+        color:#f4f4f4;
+    }
+    p{
+        margin-top: -15px;
+        color:#f4f4f4;
+    }
+    div{
+        border-radius: 25px;
+        width: 15%;
+        float: left;
+        margin: 2.5%;
+        height: 420px  ;
+        margin-top: 0px;
+        background-color: rgb(169, 194, 63);
+        position: relative;
+        text-align: center;
+        border: none;
+        img{
+            margin-top: 22px ;
+            width: 100%;
+            background-color: rgb(244, 244, 244);
+            }
+        h2{
+            position: absolute;
+            top: 83%;
+            bottom: 0;
+            left:40%;
+        }
+        p{
+            margin-top: 0px;
+            color: black;
+        }
+    }
+    button:hover{
+        background-color: red;
+    }
+    button.active{
+        background-color: blue;
+    }
+    button{
+        border-radius: 25px;
+        width: 15%;
+        float: left;
+        margin: 2.5%;
+        height: 250px  ;
+        margin-top: 0px;
+        background-color: inherit;
+        position: relative;
+        text-align: center;
+        border: none;
+        img{
+            margin-top: 22px ;
+            width: 100%;
+            background-color: rgb(244, 244, 244);
+            }
+        h2{
+            position: absolute;
+            top: 43%;
+            bottom: 0;
+            left:40%;
+        }
+        p{
+            margin-top: 0px;
+            color: black;
+        }
+    }
+        
+}
+
+.tabC{
     margin-left: -8px;
     margin-right: -8px;
     background-color: rgb(132, 59, 36);
@@ -240,8 +353,6 @@ a:active {
     }
         
 }
-
-
 .tabs button {
   background-color: inherit;
   float: left;
@@ -295,7 +406,9 @@ a:active {
   border-color: black;
   border-width: 10px;
 }
- 
+.inactive{
+    opacity: .5;
+}
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgb(102, 117, 38)
@@ -303,5 +416,5 @@ a:active {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(168, 193, 62) 
+  background: rgb(255, 188, 13)
 }
